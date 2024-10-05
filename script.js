@@ -2,14 +2,7 @@ const words = ["Apple", "Banana", "Cherry", "Dragonfruit", "Elderberry", "Fig", 
 const probabilities = [30, 30, 25, 20, 20, 15, 10, 30, 30, 25, 20, 20, 15, 10]; // Проценты шансов для каждого слова
 const roulette = document.getElementById('roulette');
 const startBtn = document.getElementById('startBtn');
-
-/*
-1,2 элемент - 30%
-3 элемент - 25%
-4,5 элемент 20%
-6 элемент 15%
-7 элемент 10%
-*/
+const resultDisplay = document.getElementById('result'); // Получаем элемент для отображения результата
 
 let currentIndex = 0;
 let currentOffset = 0;
@@ -23,6 +16,8 @@ function startRoulette() {
     roulette.innerHTML = '';
 
     startBtn.classList.add('notActive');
+    resultDisplay.textContent = 'Spinning...'; // Обновляем текст при старте
+
     words.forEach(word => {
         const wordDiv = document.createElement('div');
         wordDiv.classList.add('word');
@@ -86,6 +81,41 @@ function stopRoulette() {
     // Останавливаем рулетку
     roulette.style.transition = '';
     startBtn.classList.remove('notActive');
+
+    // Выводим результат на экран
+    
+    // console.log(finalWord);
+    // if (finalWord === "Apple"){
+    //     resultDisplay.textContent = `Result: ${finalWord} 30%`;
+    // } else {
+    //     resultDisplay.textContent = `Result: ${finalWord}`;
+    // }
+
+    switch (finalWord) {
+  case "Apple":
+    resultDisplay.textContent = `Result: ${finalWord} 30%`;
+    break;
+  case "Banana":
+    resultDisplay.textContent = `Result: ${finalWord} 30%`;
+    break;
+  case "Cherry":
+    resultDisplay.textContent = `Result: ${finalWord} 25%`;
+    break;
+  case "Dragonfruit":
+    resultDisplay.textContent = `Result: ${finalWord} 20%`;
+    break;
+  case "Elderberry":
+    resultDisplay.textContent = `Result: ${finalWord} 20%`;
+    break;
+  case "Fig":
+    resultDisplay.textContent = `Result: ${finalWord} 15%`;
+    break;
+  case "Grape":
+    resultDisplay.textContent = `Result: ${finalWord} 10%`;
+    break;
+  default:
+    resultDisplay.textContent = `Something went wrong...`;
+    }
 }
 
 startBtn.addEventListener('click', startRoulette);

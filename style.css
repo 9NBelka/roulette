@@ -1,30 +1,73 @@
-  #roulette-container {
-      display: flex;
-      flex-direction: row;
-      /* justify-content: center; */
-      width: 200px;
-      height: 50px;
-      overflow: hidden;
-      border: 2px solid #000;
-      position: relative;
-      margin: 20px auto;
-  }
+ .roulette-main-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
 
-  #roulette {
-      display: flex;
-      position: absolute;
-      white-space: nowrap;
-      transition: transform 0.5s ease-out; /* плавное движение */
-  }
+.roulette-main-block-center-vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202133;
+  border-radius: 0.4vw;
+  width: 20%;
+  padding: 2vw 0vw;
+}
+ 
+#roulette-container {
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    background: linear-gradient(331deg, #4c4e79 1.01%, #363753 84.59%);
+    position: relative;
+    margin: 20px auto;
+    border-radius: 0.4vw;
+}
 
-  .word {
-      width: 200px;
-      height: 50px;
-      text-align: center;
-      line-height: 50px;
-      font-size: 24px;
-  }
+#roulette {
+    display: flex;
+    position: absolute;
+    white-space: nowrap;
+    transition: transform 0.5s ease-out; /* плавное движение */
+    color: #a9b7cc;
+}
 
-  .notActive{
-    display: none;
-  }
+.roulette-button-start{
+  background-color: #f4ca80;
+  color: #202133;
+  font-size: .875rem;
+  font-weight: normal;
+  border: 0;
+  padding: 0.5vw 1vw;
+  line-height: 1rem;
+  cursor: pointer;
+  border-radius: 0.4vw;
+  outline: none;
+}
+
+.word {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+}
+
+#result {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    background: linear-gradient(331deg, #4c4e79 1.01%, #363753 84.59%);
+    border-radius: 0.4vw;
+    color: #a9b7cc;
+    padding: 0.5vw 1vw;
+}
+
+.notActive {
+    opacity: 0.5;
+    pointer-events: none;
+    
+}
