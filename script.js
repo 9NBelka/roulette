@@ -1,5 +1,5 @@
-const words = ["Apple", "Banana", "Cherry", "Dragonfruit", "Elderberry", "Fig", "Grape", "Apple", "Banana", "Cherry", "Dragonfruit", "Elderberry", "Fig", "Grape"];
-const probabilities = [30, 30, 25, 20, 20, 15, 10, 30, 30, 25, 20, 20, 15, 10]; // Проценты шансов для каждого слова
+const words = ["Utility AI", "Addressables", "UnitTesting", "Teamlead", "Architecture", "ECS", "All courses", "Utility AI", "Addressables", "UnitTesting", "Teamlead", "Architecture", "ECS"];
+const probabilities = [40, 40, 30, 30, 15, 10, 5, 40, 40, 30, 30, 15, 10, 5]; // Проценты шансов для каждого слова
 const roulette = document.getElementById('roulette');
 const startBtn = document.getElementById('startBtn');
 const resultDisplay = document.getElementById('result'); // Получаем элемент для отображения результата
@@ -7,7 +7,7 @@ const resultDisplay = document.getElementById('result'); // Получаем э�
 let currentIndex = 0;
 let currentOffset = 0;
 let spinSpeed = 50; // Начальная скорость
-let decelerationRate = 1.2; // Коэффициент замедления
+let decelerationRate = 1.1; // Коэффициент замедления
 let spinInterval;
 let randomTargetIndex; // Индекс для случайного остановочного слова
 
@@ -33,7 +33,7 @@ function startRoulette() {
 }
 
 function spinRoulette() {
-    let remainingSpins = (words.length * 3) + randomTargetIndex; // Фиксированные обороты + рандомная остановка
+    let remainingSpins = (words.length * 1) + randomTargetIndex; // Фиксированные обороты + рандомная остановка
 
     if (spinInterval) clearInterval(spinInterval);
 
@@ -92,26 +92,26 @@ function stopRoulette() {
     // }
 
     switch (finalWord) {
-  case "Apple":
+  case "Utility AI":
+    resultDisplay.textContent = `Result: ${finalWord} 40%`;
+    break;
+  case "Addressables":
+    resultDisplay.textContent = `Result: ${finalWord} 40%`;
+    break;
+  case "UnitTesting":
     resultDisplay.textContent = `Result: ${finalWord} 30%`;
     break;
-  case "Banana":
+  case "Teamlead":
     resultDisplay.textContent = `Result: ${finalWord} 30%`;
     break;
-  case "Cherry":
-    resultDisplay.textContent = `Result: ${finalWord} 25%`;
-    break;
-  case "Dragonfruit":
-    resultDisplay.textContent = `Result: ${finalWord} 20%`;
-    break;
-  case "Elderberry":
-    resultDisplay.textContent = `Result: ${finalWord} 20%`;
-    break;
-  case "Fig":
+  case "Architecture":
     resultDisplay.textContent = `Result: ${finalWord} 15%`;
     break;
-  case "Grape":
+  case "ECS":
     resultDisplay.textContent = `Result: ${finalWord} 10%`;
+    break;
+  case "All courses":
+    resultDisplay.textContent = `Result: ${finalWord} 5%`;
     break;
   default:
     resultDisplay.textContent = `Something went wrong...`;

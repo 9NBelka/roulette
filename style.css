@@ -1,4 +1,8 @@
- .roulette-main-block{
+body {
+  background:  gray;
+}
+
+.roulette-main-block{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -13,7 +17,7 @@
   align-items: center;
   background-color: #202133;
   border-radius: 0.4vw;
-  width: 20%;
+  width: 25vw;
   padding: 2vw 0vw;
 }
  
@@ -69,5 +73,4 @@
 .notActive {
     opacity: 0.5;
     pointer-events: none;
-    
 }
