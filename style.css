@@ -7,7 +7,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
 }
 
 .roulette-main-block-center-vertical{
@@ -16,19 +15,36 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #202133;
-  border-radius: 0.4vw;
-  width: 25vw;
-  padding: 2vw 0vw;
+  border-radius: 20px;
+  width: 1480px;
+  padding: 60px 0vw;
+}
+
+.roulette-title-image{
+  width: 400px;
+}
+
+.roulette-title-image img{
+  width: 100%;
 }
  
 #roulette-container {
-    width: 200px;
-    height: 50px;
+  
+    width: 400px; /* Увеличиваем ширину контейнера рулетки */
+    height: 100px; 
     overflow: hidden;
     background: linear-gradient(331deg, #4c4e79 1.01%, #363753 84.59%);
     position: relative;
-    margin: 20px auto;
-    border-radius: 0.4vw;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.word {
+     width: 400px; /* Увеличиваем ширину каждого слова */
+    height: 100px; /* Увеличиваем высоту каждого слова */
+    text-align: center;
+    line-height: 100px; /* Вертикальное выравнивание текста */
+    font-size: 32px; /* Увеличиваем размер шрифта */
 }
 
 #roulette {
@@ -40,37 +56,90 @@ body {
 }
 
 .roulette-button-start{
+  margin-top: 30px;
   background-color: #f4ca80;
   color: #202133;
-  font-size: .875rem;
+  font-size: 1vw;
   font-weight: normal;
   border: 0;
-  padding: 0.5vw 1vw;
-  line-height: 1rem;
+  padding: 15px 50px;
   cursor: pointer;
-  border-radius: 0.4vw;
+  border-radius: 10px;
   outline: none;
 }
 
-.word {
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 24px;
-}
 
 #result {
+    margin-top: 30px;
     text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
+    font-size: 32px;
     background: linear-gradient(331deg, #4c4e79 1.01%, #363753 84.59%);
-    border-radius: 0.4vw;
+    border-radius: 20px;
     color: #a9b7cc;
-    padding: 0.5vw 1vw;
+    padding: 20px 40px;
 }
 
 .notActive {
     opacity: 0.5;
     pointer-events: none;
+}
+
+.roulette-table-chance-title h4{
+  display: flex;
+  font-size: 28px;
+  text-align: center;
+  color: #a9b7cc;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.roulette-table-chance{
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+  border-radius: 20px;
+  padding: 10px 30px;
+  background: linear-gradient(331deg, #4c4e79 1.01%, #363753 84.59%);
+  margin-top: 30px;
+}
+
+.roulette-table-chance-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.roulette-table-chance-box{
+  text-align: center;
+  color: #a9b7cc;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: normal;
+  width: 120px;
+}
+
+.roulette-table-chance-box.border{
+  border-top: 0.1vw solid #ffffff23;
+}
+
+.roulette-text-for-promo h6{
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  color: #a9b7cc;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 15px;
+}
+
+ul li{
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+  color: #a9b7cc;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 15px;
 }
